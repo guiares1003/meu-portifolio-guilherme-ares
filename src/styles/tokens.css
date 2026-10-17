@@ -1,0 +1,92 @@
+/*
+  Layout: faixa editorial clara de 72rem. Um nome gigante em fonte variável abre a página, o resto
+  é calmo: texto em coluna estreita, cores pequenas e quentes só nos detalhes, botões com "degrau".
+  Tudo que é cor ou fonte vem destas variáveis.
+*/
+:root {
+  --font-display: 'Bricolage Grotesque', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-code: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Superfícies e texto */
+  --bg: #f8f8fc;
+  --bg-alt: #eeeef8;
+  --surface: #ffffff;
+  --ink: #16163a;
+  --ink-soft: #4b4b70;
+  --line: #d8d8ea;
+  --outline: #16163a; /* contorno de botões e cartões */
+  --edge: #16163a; /* "degrau" sob botões e cartões */
+
+  /* Cores de detalhe: cada uma tem uma versão forte e uma suave */
+  --grape: #5b3fe4;
+  --grape-tint: #e8e3ff;
+  --lagoon: #007c84;
+  --lagoon-tint: #d3f1f2;
+  --tangerine: #c94a06;
+  --tangerine-tint: #ffe4d3;
+  --bubblegum: #d6336c;
+  --bubblegum-tint: #ffddea;
+  --lemon: #ffd43b;
+
+  --on-accent: #ffffff;
+  --focus: #5b3fe4;
+  --scrim: rgba(14, 14, 40, 0.55);
+
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 24px;
+
+  --step: 3px; /* altura do degrau dos botões */
+  --header-h: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0f0f23;
+    --bg-alt: #16162e;
+    --surface: #1c1c3a;
+    --ink: #f1f0ff;
+    --ink-soft: #b6b5d8;
+    --line: #33335a;
+    --outline: #5a58a6;
+    --edge: #05050f;
+    --grape: #a495ff;
+    --grape-tint: #2b2657;
+    --lagoon: #46d3da;
+    --lagoon-tint: #12414a;
+    --tangerine: #ff9559;
+    --tangerine-tint: #432716;
+    --bubblegum: #ff80ae;
+    --bubblegum-tint: #471b31;
+    --lemon: #ffd43b;
+    --on-accent: #0f0f23;
+    --focus: #ffd43b;
+    --scrim: rgba(3, 3, 14, 0.7);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f0f23;
+  --bg-alt: #16162e;
+  --surface: #1c1c3a;
+  --ink: #f1f0ff;
+  --ink-soft: #b6b5d8;
+  --line: #33335a;
+  --outline: #5a58a6;
+  --edge: #05050f;
+  --grape: #a495ff;
+  --grape-tint: #2b2657;
+  --lagoon: #46d3da;
+  --lagoon-tint: #12414a;
+  --tangerine: #ff9559;
+  --tangerine-tint: #432716;
+  --bubblegum: #ff80ae;
+  --bubblegum-tint: #471b31;
+  --lemon: #ffd43b;
+  --on-accent: #0f0f23;
+  --focus: #ffd43b;
+  --scrim: rgba(3, 3, 14, 0.7);
+  color-scheme: dark;
+}
